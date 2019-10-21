@@ -6,7 +6,6 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.2'
 
 gem 'active_interaction'
-gem 'active_model_serializers'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise_token_auth'
 gem 'graphql'

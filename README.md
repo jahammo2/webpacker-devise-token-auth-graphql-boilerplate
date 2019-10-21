@@ -23,11 +23,11 @@
 1. `cp config/database.example.yml config/database.yml`
 1. `bundle install`
 1. `yarn install`
+1. `rails db:setup`
 1. Run `bundle exec rspec`
 1. Run `bundle exec rubocop`
 1. Run `yarn test`
 1. Run `yarn lint`
-1. `rails db:setup`
 
 ## Testing
 
