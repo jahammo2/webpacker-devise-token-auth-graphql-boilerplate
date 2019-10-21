@@ -39,7 +39,7 @@ class Routes extends PureComponent {
   renderAuthedRoutes = (renderProps) => {
     const { accessToken, email } = this.props;
 
-    if (!accessToken || !email) return this.redirectToSign(renderProps);
+    if (!accessToken || !email) return this.redirectToSignIn(renderProps);
 
     return <AuthenticatedRoutes />;
   }
