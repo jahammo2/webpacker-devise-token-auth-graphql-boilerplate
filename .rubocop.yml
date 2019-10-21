@@ -1,0 +1,86 @@
+require: rubocop-performance
+
+AllCops:
+  Exclude:
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "db/migrate/**/*"
+    - "node_modules/**/*"
+    - "spec/spec_helper.rb"
+    - "spec/rails_helper.rb"
+    - "bin/*"
+  UseCache: false
+  TargetRubyVersion: 2.6
+
+Layout/DotPosition:
+  Description: Checks the position of the dot in multi-line method calls.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains
+  Enabled: true
+  EnforcedStyle: leading
+  SupportedStyles:
+  - leading
+  - trailing
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+Metrics/ClassLength:
+  Description: Avoid classes longer than 80 lines of code.
+  CountComments: false
+  Max: 80
+Metrics/CyclomaticComplexity:
+  Description: A complexity metric that is strongly correlated to the number of test
+    cases needed to validate a method.
+  Max: 6
+Metrics/LineLength:
+  Max: 100
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # contaning a URI to be longer than Max.
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  IgnoredPatterns: ['(\A|\s)#', '(\A|\s)js: true']
+Metrics/MethodLength:
+  Description: Avoid methods longer than 6 lines of code.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#short-methods
+  CountComments: false
+  Max: 6
+Metrics/ModuleLength:
+  CountComments: false
+  Max: 80
+  Description: Avoid modules longer than 80 lines of code.
+Metrics/ParameterLists:
+  Description: Avoid parameter lists longer than three or four parameters.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#too-many-params
+  Max: 3
+  CountKeywordArgs: true
+Metrics/PerceivedComplexity:
+  Description: A complexity metric geared towards measuring complexity for a human
+    reader.
+  Max: 7
+
+Naming/FileName:
+  Description: Use snake_case for source file names.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Description: Document classes and non-namespace modules.
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Description: >-
+                 Add the frozen_string_literal comment to the top of files
+                 to help transition to frozen string literals by default.
+  Enabled: false
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+  Enabled: true

@@ -1,0 +1,10 @@
+input {
+  &:focus {
+    box-shadow: 0 4px 8px $color--primary;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $color--gray-xlight;
+  }
+}

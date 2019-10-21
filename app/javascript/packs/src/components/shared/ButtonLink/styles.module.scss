@@ -1,0 +1,32 @@
+.Root {
+  display: flex;
+  width: 100%;
+
+  &.floatRight {
+    display: block;
+  }
+}
+
+.Link {
+  margin: $spacing--med auto 0;
+}
+
+.Button {
+  background-color: $color--primary;
+  border-radius: 6px;
+  color: $color--off-primary;
+  font-weight: bold;
+  line-height: 16px;
+  padding: $spacing--xxs ($spacing--xxs * 1.75);
+
+  i {
+    color: $color--off-primary;
+    margin-left: $spacing--xxs;
+  }
+
+  &.floatRight {
+    float: right;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}

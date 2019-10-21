@@ -1,0 +1,16 @@
+{
+  "env": {
+    "EMAIL_RECIPIENTS": { "required": true },
+    "MAILGUN_API_KEY": { "required": true },
+    "MAILGUN_DOMAIN": { "required": true },
+    "MAILGUN_PASSWORD": { "required": true },
+    "MAILGUN_USERNAME": { "required": true },
+    "RACK_ENV": { "required": true },
+    "RAILS_ENV": { "required": true }
+  },
+  "name": "webpacker-devise-token-auth-graphql-boilerplate",
+  "scripts": {
+    "postdeploy": "bin/rails db:schema:load && bin/rails restart"
+  },
+  "stack": "heroku-18"
+}

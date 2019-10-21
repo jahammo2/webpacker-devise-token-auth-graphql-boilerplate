@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpacker Devise Token Auth GraphQL Boilerplate</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <%= javascript_pack_tag 'index' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f9c38611df.js" crossorigin="anonymous"></script>
+
+    <!-- Lighthouse Details -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#C50001"/>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

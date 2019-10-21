@@ -1,0 +1,20 @@
+.Root {
+  display: block;
+  margin: $spacing--xs $spacing--xs 0;
+}
+
+.Field {
+  border: 1px solid $color--black;
+  border-radius: 6px;
+  padding: $spacing--xxxs;
+  width: calc(100% - 18px);
+
+  &.isErroring {
+    border-color: $color--red;
+  }
+
+  &:disabled {
+    border-color: $color--disabled;
+    color: $color--disabled;
+  }
+}

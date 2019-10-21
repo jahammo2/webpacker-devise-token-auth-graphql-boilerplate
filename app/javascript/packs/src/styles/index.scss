@@ -1,0 +1,10 @@
+// This file is to hold our global element styles.
+// We then import them into /src/index.jsx
+
+@import "./base/index.scss";
+
+* {
+  color: $color--primary;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: $font-size--med * 1.5;
+}

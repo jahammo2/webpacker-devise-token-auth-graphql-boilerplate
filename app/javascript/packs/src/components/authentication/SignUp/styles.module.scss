@@ -1,0 +1,20 @@
+.Root {
+  @include root-container;
+}
+
+.Form {
+  margin-top: $spacing--med;
+}
+
+.ParagraphContent {
+  margin-top: $spacing--sm;
+}
+
+.RecoverPasswordPara {
+  margin: $spacing--lg $spacing--xs 0;
+}
+
+.SavingParagraph {
+  margin-top: $spacing--med;
+  text-align: center;
+}

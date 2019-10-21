@@ -1,0 +1,9 @@
+@mixin root-container {
+  padding: 36px;
+
+  @include min-width($breakpoint--tablet) {
+    margin: 0 auto;
+    padding: 36px 0;
+    width: 706px;
+  }
+}

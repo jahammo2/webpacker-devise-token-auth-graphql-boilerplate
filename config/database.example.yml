@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: webpacker_devise_token_auth_graphql_boilerplate_development
+
+test:
+  <<: *default
+  database: webpacker_devise_token_auth_graphql_boilerplate_test
+
+staging:
+  <<: *default
+  database: webpacker_devise_token_auth_graphql_boilerplate_staging
+
+production:
+  <<: *default
+  database: webpacker_devise_token_auth_graphql_boilerplate_production

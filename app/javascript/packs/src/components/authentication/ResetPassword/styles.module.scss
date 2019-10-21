@@ -1,0 +1,7 @@
+.Root {
+  @include root-container;
+}
+
+.ParagraphContent {
+  margin-top: $spacing--sm;
+}

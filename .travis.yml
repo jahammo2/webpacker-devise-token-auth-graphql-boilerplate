@@ -1,0 +1,29 @@
+language: ruby
+
+services:
+  - postgresql
+
+addons:
+  chrome: stable
+
+before_script:
+  - wget -N http://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - nvm install node
+  - npm install
+  - cp config/database.example.yml config/database.yml
+  - psql -c 'create database memory_app_test;' -U postgres
+  - bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare --trace
+
+script:
+  - whereis google-chrome-stable
+  - whereis chromedriver
+  - bundle exec rubocop
+  - bundle exec rspec
+  - npm run lint
+  - npm run test

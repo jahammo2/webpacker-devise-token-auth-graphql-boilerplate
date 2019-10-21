@@ -1,0 +1,23 @@
+.Root {
+  @include root-container;
+}
+
+.ForgotPasswordLink {
+  float: right;
+  font-size: $font-size--sm;
+  margin-right: $spacing--xs;
+}
+
+.ParagraphContent {
+  margin-top: $spacing--sm;
+}
+
+.SavingParagraph {
+  margin-top: $spacing--med;
+  text-align: center;
+}
+
+.SignUpParagraph {
+  margin-top: $spacing--lg;
+  text-align: center;
+}

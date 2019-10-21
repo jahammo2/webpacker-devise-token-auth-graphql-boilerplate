@@ -1,0 +1,60 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Oops! We'll need your email to create an account. Please add that so we can get started."
+              taken: "Hmmm, that email is already taken. Just click 'reset password' below and we'll send you a reset password link."
+              invalid: "Hmmm, we don't recognize that email format. Please use this format: yourname@example.com."
+            password:
+              blank: "Oh no! Looks like you didn't add a password. Please add that so we can secure your account."
+              confirmation: "Hmmm, please try again. It appears your password and confirmation do not match."
+            password_confirmation:
+              blank: "Oh no! Looks like you didn't confirm your password. Please do that so we can secure your account."
+
+  devise_token_auth:
+    passwords:
+      missing_email: "Oops! We'll need your email to send you a recovery link. Please add that so we can email you the link."
+    sessions:
+      not_confirmed: "Oops! It appears you haven't confirmed your email. We sent the confirmation to '%{email}'. You'll need to confirm your email before we can go further."
+      bad_credentials: "Hmmm, it appears your email and password do not match. Please double check them and try once more."
+
+  errors:
+    messages:
+      confirmation: "Hmmm, please try again. It appears your %{attribute} and confirmation do not match."
+      validate_sign_up_params: "Oops! We'll need your email to sign you up."
