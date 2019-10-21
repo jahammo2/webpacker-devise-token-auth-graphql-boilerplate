@@ -38,8 +38,4 @@ module RenderHelper
   def render_access_denied
     render_failure_json(status: 401, errors: 'Access denied')
   end
-
-  def serialize(data)
-    ActiveModelSerializers::SerializableResource.new(data)
-  end
 end
